@@ -59,6 +59,8 @@ templates:
     - text: "IP and TCP/UDP headers are unaffected. The payload is WTLS-encrypted, with HMAC included."
     utter_nat:
     - text: "By using layer 5 (session layer) security mechanisms instead of layer 3 (network layer), it is possible to avoid the problem altogether. IP and TCP headers are unaffected by Columbitech Mobile VPN™."
+    utter_servers:
+    - text: "All server versions of Windows from Windows Server 2003 to 2016 and basically all Linux distributions."
 
 actions:
     - utter_greet
