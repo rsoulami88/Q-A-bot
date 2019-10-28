@@ -3,7 +3,27 @@ intents:
     - thankyou
     - affirm
     - deny
-    - ask_question
+    - ask_question_bearer_networks
+    - ask_question_protocols
+    - ask_question_multicast
+    - ask_question_virtualization
+    - ask_question_licensed
+    - ask_question_client_auth
+    - ask_question_server_auth
+    - ask_question_client_platforms
+    - ask_question_encryption
+    - ask_question_key_exchange
+    - ask_question_users
+    - ask_question_seamless_roaming
+    - ask_question_bandwidth
+    - ask_question_manage_flow
+    - ask_question_wtls
+    - ask_question_packet_authentication
+    - ask_question_server_platforms
+    - ask_question_nat
+
+entities:
+    - type
 
 templates:
     utter_greet:
@@ -16,8 +36,6 @@ templates:
     - text: "Happy to help !"
     utter_deny:
     - text: "Sorry, Can you ask me again ?"
-    utter_help:
-    - text: "Does it help ?"
     utter_bearer:
     - text: "Columbitech Mobile VPNTM should in principle work over any IP-network. The following types of connections have been explicitly tested: WiFi, GPRS, 3G, 4G (LTE), CDPD, PHS, Ethernet and modem Dial-Up."
     utter_protocols:
@@ -61,6 +79,8 @@ templates:
     - text: "By using layer 5 (session layer) security mechanisms instead of layer 3 (network layer), it is possible to avoid the problem altogether. IP and TCP headers are unaffected by Columbitech Mobile VPN™."
     utter_servers:
     - text: "All server versions of Windows from Windows Server 2003 to 2016 and basically all Linux distributions."
+    utter_help:
+        - text: "Does it help ?"
 
 actions:
     - utter_greet
@@ -85,4 +105,5 @@ actions:
     - utter_wtls
     - utter_packetauth
     - utter_nat
+    - utter_servers
 
