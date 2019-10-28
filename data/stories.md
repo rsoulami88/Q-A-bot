@@ -406,4 +406,53 @@
 * thankyou
 - utter_thankyou
 
-
+## story 34
+* greet
+  - utter_greet
+* ask_question_nat{"type": "NAT"}
+  - utter_nat
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_packet_authentication{"type": "packet authentication"}
+  - utter_packetauth
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_server_platforms{"type": "server platforms"}
+  - utter_servers
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_manage_flow{"type": "manage flow"}
+  - utter_manageflow
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_bandwidth{"type": "bandwidth changes"}
+  - utter_bandwith
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_users{"type": "users"}
+  - utter_numberusers
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_licensed{"type": "licensed"}
+  - utter_license
+    - utter_help
+* deny
+    - utter_deny
+* ask_question_client_auth{"type": "client authentication"}
+  - utter_clientauth
+  - utter_help
+* deny
+    - utter_deny
+* ask_question_server_auth{"type": "server authentication"}
+  - utter_serverauth
+  - utter_help
+* affirm
+    - utter_affirm
+* thankyou
+    - utter_thankyou
