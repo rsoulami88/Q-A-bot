@@ -1,36 +1,86 @@
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
+    - greet
+    - thankyou
+    - affirm
+    - deny
+    - ask_question
 
 templates:
-  utter_greet:
-  - text: "Hey! How are you?"
+    utter_greet:
+    - text: "Hi, how can i be of assistance?"
+    - text: "Good evening, how may I help you?"
+    utter_thankyou:
+    - text: "I will be happy to help you again !"
+    - text: "Sure, I will be there again anytime"
+    utter_affirm:
+    - text: "Happy to help !"
+    utter_deny:
+    - text: "Sorry, Can you ask me again ?"
+    utter_help:
+    - text: "Does it help ?"
+    utter_bearer:
+    - text: "Columbitech Mobile VPNTM should in principle work over any IP-network. The following types of connections have been explicitly tested: WiFi, GPRS, 3G, 4G (LTE), CDPD, PHS, Ethernet and modem Dial-Up."
+    utter_protocols:
+    - text: "All protocols running on top of TCP, UDP and ICMP."
+    utter_multicast:
+    - text: "Yes. IGMP based multicast is supported."
+    utter_virtualization:
+    - text: "Absolutely, the servers have been tested on Hyper-V, VMware, and Xen."
+    utter_license:
+    - text: "The license fee is based on the total number of users and the total number of Mobile VPN Servers. After installing the Mobile VPN Server, you have 30 days to receive your license as described here. During these 30 days the Mobile VPN Server is running with a fully functional 10 user evaluation license. To receive your license, you need to give the serial number of your Mobile VPN Server to your reseller, which in turn will give you your license. The license is unique for your installation."
+    utter_clientauth:
+    - text: "Columbitech Mobile VPN offers a complete range of authentication methods that satisfy the most security sensitive enterprise customers. We support Windows Domain username/password, client certificates (WTLS and X.509), RADIUS and RSA SecurID."
+    utter_serverauth:
+    - text: "WTLS and X.509 certificates."
+    utter_clientplateforms:
+    - text: "All client versions of Windows from Windows XP to Windows 10 (32- and 64-bit), all versions of Windows Mobile, Windows Phone 8, Embedded Systems, iOS and Android."
+    utter_encryption:
+    - text: "Columbitech Mobile VPN uses AES (up to 256 bits) for symmetric encryption and RSA (up to 15000 bits) for key exchange."
+    utter_keyexchange:
+    - text: "The RSA algorithm is used for key exchange."
+    utter_numberusers:
+    - text: "This depends mainly on the required bandwidth for connecting clients. In moderns servers with modern CPUs, you should basically be able to see the same throughput for a client with a VPN connection as without. If there are many clients connecting to the same server, those will be sharing the total output of the server, just like they would in a non-VPN setup."
+    utter_roaming:
+    - text: "The roaming feature of Columbitech Mobile VPN solution is based on the session resume functionality in WTLS. Using WTLS session resume means that the communication bearer, for example the WiFi connection, can fail for different reasons without this having any serious effect on the actual user situation. At the beginning of a wireless work session, the VPN Client establishes a connection to Columbitech Mobile VPN Server, using the best possible connection available. As soon as a connection is established, the user can use any application in a normal way. The applications cannot detect the existence of the Columbitech Mobile VPN, they only see one usable connection; the Columbitech virtual network interface card (NIC). When a bearer fails (for instance the user might have moved out of WiFi coverage), the Columbitech Mobile VPN client automatically switches over to another available bearer, without interrupting the session. Behind the scenes, the Columbitech virtual network card (NIC) simulates having a connection while the client finds a new network, establishes a new TCP connection, makes a session resume and finally something we call transaction recovery. This last step is basically synchronization of the data flow, enabling for example a file transfer to continue. This is why the applications continue to work. During the switch to another bearer, there will be a short delay. The application however, will just think of that delay as a period of lower-than-usual data rate, and will therefore not complain."
+    utter_bandwith:
+    - text: "Through the use of split TCP connections. Each client application has a TCP connection to the VPN client and each corresponding server application has a TCP connection to the Mobile VPN Server. These connections are then multiplexed over a single TCP connection between the Mobile VPN Server and the Mobile VPN client, which is
+             transparent to the servers and to the client applications. Every time the client loses and regains network coverage or roams to another network, the single intermediate connection is dropped and a new one established, without breaking the application-to-application session."
+    utter_manageflow:
+    - text: "Columbitech Mobile VPNTM uses the TCP receive buffer for flow control. When the buffer is full, the flow of data from applications will cease, without any unnecessary retransmissions or control messages. This also allows the flow of data to be explicitly restarted after network suspension (failure or roaming), without relying on retransmission timers."
+    utter_wtls:
+    - text: "WTLS is a version of TLS that has been optimized for the wireless environment. There are some concrete advantages of using WTLS:
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+             WTLS has optimized the handshake procedure compared to TLS.
+             WTLS uses shorter shared secrets that are changed more often compared to TLS. The shorter secrets give computational advantages on thin clients and security is maintained by changing them more often.
+             WTLS supports datagrams, TLS does not. The use of datagrams gives advantages when communicating over a packet switching network.
+             WTLS leaves the fragmentation of data to the transport layer.
+             WTLS has an additional error message type that is relevant when the connection is wireless."
+    utter_packetauth:
+    - text: "IP and TCP/UDP headers are unaffected. The payload is WTLS-encrypted, with HMAC included."
+    utter_nat:
+    - text: "By using layer 5 (session layer) security mechanisms instead of layer 3 (network layer), it is possible to avoid the problem altogether. IP and TCP headers are unaffected by Columbitech Mobile VPN™."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+actions:
+    - utter_greet
+    - utter_thankyou
+    - utter_affirm
+    - utter_deny
+    - utter_help
+    - utter_bearer
+    - utter_protocols
+    - utter_multicast
+    - utter_virtualization
+    - utter_license
+    - utter_clientauth
+    - utter_serverauth
+    - utter_clientplateforms
+    - utter_encryption
+    - utter_keyexchange
+    - utter_numberusers
+    - utter_roaming
+    - utter_bandwith
+    - utter_manageflow
+    - utter_wtls
+    - utter_packetauth
+    - utter_nat
 
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
