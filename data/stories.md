@@ -228,4 +228,3 @@
     - utter_affirm
 * thankyou
     - utter_thankyou
-
