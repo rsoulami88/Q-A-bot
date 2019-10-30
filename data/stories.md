@@ -8,6 +8,7 @@
     - utter_affirm
 * thankyou
     - utter_thankyou
+    - action_chat_restart
 
 ## simple path protocols
 * greet

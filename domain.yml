@@ -106,4 +106,5 @@ actions:
     - utter_packetauth
     - utter_nat
     - utter_servers
+    - action_chat_restart
 
