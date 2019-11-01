@@ -113,5 +113,8 @@ actions:
     - utter_packetauth
     - utter_nat
     - utter_servers
+    - utter_host
+    - utter_thirdparty
+    - utter_session
     - action_chat_restart
 
