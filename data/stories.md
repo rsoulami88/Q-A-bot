@@ -375,6 +375,24 @@
   - utter_nat
     - utter_help
     - action_chat_restart
+     
+## story 47
+* ask_question_host{"type": "host other applications"}
+  - utter_host
+    - utter_help
+    - action_chat_restart
+
+## story 48
+* ask_question_thirdparty{"type": "third party Certificate Authority"}
+  - utter_thirdparty
+    - utter_help
+    - action_chat_restart
+    
+## story 48
+* ask_question_session{"type": "session resumes"}
+  - utter_session
+    - utter_help
+    - action_chat_restart
     
 ## story 44
 * affirm

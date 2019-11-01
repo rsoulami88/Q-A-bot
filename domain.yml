@@ -81,6 +81,13 @@ templates:
     - text: "All server versions of Windows from Windows Server 2003 to 2016 and basically all Linux distributions."
     utter_help:
         - text: "Does it help ?"
+    utter_host:
+        - text: "No, we do not recommend running any other applications on the VPN Server computer (or Virtual Machine instance)."
+    utter_thirdparty:
+        - text: "Yes. Columbitech Mobile VPN support X.509 and WTLS certificates. When using certificates from other Certificate Authorities, like Microsoft Certificate Services or Verisign, make sure the private keys are saved in the PKCS#12 format (.p12 or .pfx)."
+    utter_session:
+        - text: "Both the server and client do have a shared session secret, which is exchanged in the short handshake resuming the session. The risk, when a device is stolen without anyone’s notice, is that you do have an open session that has not timed out, and the thief can continue using the tunnel. This risk is always there with any VPN, since this is not a session resume functionality. The difference as compared to session resume is that the
+                 session is open even if you don’t have network coverage, i.e. someone steals your device which is physically not connected but virtually (in session resume mode). However, normally you would disconnect if you leave your device, or let it hibernate or something else requiring you to enter a password. It is decided by the system administrator how long the session time out will be. 180 minutes is the default."
 
 actions:
     - utter_greet

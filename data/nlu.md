@@ -228,3 +228,25 @@
 - there is problems with [Network Address Translation](type) supports?
 - is there any [Network Address Translation](type) problems?
 - [Network Address Translation](type) ?
+
+## intent:ask_question_host
+- Can I [host other applications](type) on the VPN Server computer?
+- Can I [host](type) other applications on the VPN Server computer?
+- Can I [host](type) other applications ?
+- Can I [host other applications](type)?
+- [host other applications](type)?
+- [hosting other applications](type)?
+- [hosting other applications](type) possible ?
+
+## intent:ask_question_thirdparty
+- Can you use a [third party Certificate Authority](type) to manage certificates?
+- Can you use a [third party Certificate](type) Authority to manage certificates?
+- Can you use a [third party](type) Certificate Authority to manage certificates?
+- using [third party Certificate Authority](type) to manage certificates?
+- Manage certificates with [third party Certificate](type) Authority?
+- [third party](type) Certificate Authority?
+- [third party Certificate Authority](type) ?
+
+## intent:ask_question_session
+- The mVPN client [session resumes](type) when network coverage is restored. What is exchanged to allow the resume? What risk is implicit if client device is lost/stolen?
+- The mVPN client session resumes when network coverage is restored. What is exchanged to allow the [resume](type)? What risk is implicit if client device is lost/stolen?
